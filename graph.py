@@ -23,19 +23,21 @@ pos = {"Холодна гора": (-0.8, 0.4), "Південний вокзал"
        "Захисників України": (-0.2, 0.0), "Архітектора Бекетова": (-0.2, 0.2), "Держпром": (-0.27, 0.55), "Наукова": (-0.3, 0.65),
        "Ботанічний сад": (-0.35, 0.8), "23 серпня": (-0.4, 0.95), "Олексіївська": (-0.45, 1.1), "Перемога": (-0.5, 1.25)}
 
-# Візуалізація графу
-nx.draw(metro_network, pos=pos, with_labels=True, font_weight='bold', node_color='lightblue', edge_color='gray', node_size=800, font_size=8, font_color='black')
+if __name__ == "__main__":
 
-# Додавання назви графу як заголовку
-plt.title(metro_network.name)
+    # Візуалізація графу
+    nx.draw(metro_network, pos=pos, with_labels=True, font_weight='bold', node_color='lightblue', edge_color='gray', node_size=800, font_size=8, font_color='black')
 
-plt.show()
+    # Додавання назви графу як заголовку
+    plt.title(metro_network.name)
 
-# Основні характеристики графу
-print("Назва графу:", metro_network.name)
-print("Кількість станцій:", metro_network.number_of_nodes())
-print("Кількість ліній:", metro_network.number_of_edges())
+    plt.show()
 
-# Ступінь вершин
-degrees = dict(metro_network.degree())
-print("Ступінь станцій:", degrees)
+    # Основні характеристики графу
+    print("Назва графу:", metro_network.name)
+    print("Кількість станцій:", metro_network.number_of_nodes())
+    print("Кількість ліній:", metro_network.number_of_edges())
+
+    # Ступінь вершин
+    degrees = dict(metro_network.degree())
+    print("Ступінь станцій:", degrees)
