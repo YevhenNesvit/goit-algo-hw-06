@@ -42,5 +42,4 @@ def dijkstra(graph, start):
 start_station = "Холодна гора"
 shortest_path, cost = dijkstra(metro_network, start_station)
 
-print(f"Найкоротший шлях від {start_station}: {shortest_path},\
-      Дальність: {cost} км")
+print(f"Найкоротший шлях від {start_station}: {shortest_path}, Дальність: {cost} км")
