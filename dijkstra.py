@@ -1,5 +1,6 @@
 from graph import metro_network
 
+
 def dijkstra(graph, start):
     distances = {node: float('infinity') for node in graph.nodes}
     distances[start] = 0
@@ -36,8 +37,10 @@ def dijkstra(graph, start):
 
     return path, total_cost
 
+
 # Assuming you have a NetworkX graph named metro_network
 start_station = "Холодна гора"
 shortest_path, cost = dijkstra(metro_network, start_station)
 
-print(f"Найкоротший шлях від {start_station}: {shortest_path}, Дальність: {cost} км")
+print(f"Найкоротший шлях від {start_station}: {shortest_path},\
+      Дальність: {cost} км")
