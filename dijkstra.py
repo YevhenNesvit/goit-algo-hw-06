@@ -1,5 +1,3 @@
-import networkx as nx
-
 from graph import metro_network
 
 def dijkstra(graph, start):
